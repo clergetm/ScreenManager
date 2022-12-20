@@ -24,5 +24,13 @@ namespace ScreenManager {
 			return csbi.srWindow.Bottom - csbi.srWindow.Top + 1;
 		}
 
+		/// <summary>
+		/// Go back to (0, 0) and clear the terminal.
+		/// </summary>
+		string clear() {
+			return 
+				"\033[H"	// Moves cursor to home position (0, 0).
+				"\033[2J";	// Erase entire screen.
+		}
 	}
 }
