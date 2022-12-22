@@ -15,6 +15,7 @@ namespace ScreenManager {
 		string set_coordinates(short, short);	// Setter of coordinates with x and y.
 		string set_coordinates(coordinates);	// Setter of coordinates with tuple.
 		string move_up(short);					// Move the cursor up by a number of lines.
+		string move_down(short);				// Move the cursor down by a number of lines.
 
 	}
 }
