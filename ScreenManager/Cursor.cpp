@@ -1,4 +1,6 @@
 #include "Cursor.h"
+#include <iostream>
+using namespace std;
 
 namespace ScreenManager {
 	namespace Cursor {
@@ -66,5 +68,25 @@ namespace ScreenManager {
 		string move_backward(short l) {
 			return "\033[" + to_string(l) + "D";
 		}
+
+		/// <summary>
+		/// Set the coordinates with x and y and write the given message.
+		/// </summary>
+		/// <param name="x">value on x axis.</param>
+		/// <param name="y">value on y axis.</param>
+		/// <param name="m">The message to print.</param>
+		void cout_on_pos(short x, short y, string m) {
+			cout << set_coordinates(x, y) << m;
+		}
+
+		/// <summary>
+		/// Set the coordinates with tuple and write the given message.
+		/// </summary>
+		/// <param name="c"> a tuple of coordinates (x, y).</param>
+		/// <param name="m">The message to print.</param>
+		void cout_on_pos(coordinates c, string m) {
+			cout << set_coordinates(c) << m;
+		}
+
 	}
 }
