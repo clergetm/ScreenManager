@@ -17,6 +17,7 @@ namespace ScreenManager {
 		string move_up(short);					// Move the cursor up by a number of lines.
 		string move_down(short);				// Move the cursor down by a number of lines.
 		string move_forward(short);				// Move the cursor forward by a number of lines.
+		string move_backward(short);			// Move the cursor backward by a number of lines.
 
 	}
 }

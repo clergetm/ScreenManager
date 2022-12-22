@@ -57,5 +57,14 @@ namespace ScreenManager {
 		string move_forward(short l) {
 			return "\033[" + to_string(l) + "C";
 		}
+
+		/// <summary>
+		/// Move the cursor backward by a number of lines.
+		/// </summary>
+		/// <param name="l">number of lines.</param>
+		/// <returns>The ANSI Sequence to move the cursor backward.</returns>
+		string move_backward(short l) {
+			return "\033[" + to_string(l) + "D";
+		}
 	}
 }
