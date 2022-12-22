@@ -49,5 +49,13 @@ namespace ScreenManager {
 			return "\033[" + to_string(l) + "B";
 		}
 
+		/// <summary>
+		/// Move the cursor forward by a number of lines.
+		/// </summary>
+		/// <param name="l">number of lines.</param>
+		/// <returns>The ANSI Sequence to move the cursor forward.</returns>
+		string move_forward(short l) {
+			return "\033[" + to_string(l) + "C";
+		}
 	}
 }
