@@ -143,6 +143,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Border.cpp" />
     <ClCompile Include="Screen.cpp" />
+    <ClCompile Include="ScreenManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Border.h" />
