@@ -15,6 +15,7 @@ namespace ScreenManager {
 		const auto x = get_width;	// Alias of get_witdh.
 		int get_height();			// Get current Height.
 		const auto y = get_height;	// Alias of get_height.
+		string set_title(string);	// Set the title.
 		string clear();				// Clear the terminal.
 
 	}
