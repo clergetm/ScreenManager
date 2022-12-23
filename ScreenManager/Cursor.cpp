@@ -3,6 +3,7 @@
 #include <iostream>
 
 namespace ScreenManager {
+
 	namespace Cursor {
 
 		/// <summary>
@@ -96,4 +97,5 @@ namespace ScreenManager {
 		}
 
 	}
+
 }

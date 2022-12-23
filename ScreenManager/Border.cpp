@@ -2,6 +2,7 @@
 #include "Border.h"
 
 namespace ScreenManager {
+
 	namespace Border {
 
 		/// <summary>
@@ -32,7 +33,8 @@ namespace ScreenManager {
 		/// <param name="end_x">x of ending point.</param>
 		/// <param name="end_y">y of ending point.</param>
 		void draw_simple_border(short x, short y, short end_x, short end_y) {
-			assert(x < end_y || y < end_y);
+			assert(x < end_y);
+			assert(y < end_y);
 
 			// Left vertical line.
 			cout << set_coordinates(x, y);
@@ -90,7 +92,8 @@ namespace ScreenManager {
 		/// <param name="end_x">x of ending point.</param>
 		/// <param name="end_y">y of ending point.</param>
 		void draw_double_border(short x, short y, short end_x, short end_y) {
-			assert(x < end_y || y < end_y);
+			assert(x < end_y);
+			assert(y < end_y);
 
 			// Left vertical line.
 			cout << set_coordinates(x, y);
@@ -119,5 +122,7 @@ namespace ScreenManager {
 		void draw_double_border(coordinates start, coordinates end) {
 			draw_double_border(get<0>(start), get<1>(start), get<0>(end), get<1>(end));
 		}
+
 	}
+
 }

@@ -4,7 +4,9 @@
 
 using namespace std;
 using namespace ScreenManager::Cursor;
+
 namespace ScreenManager {
+
 	/// <summary>
 	/// Namespace for border related methods.
 	/// </summary>

@@ -5,6 +5,7 @@
 
 using namespace std;
 using namespace ScreenManager;
+
 namespace ScreenManager {
 	
 	/// <summary>

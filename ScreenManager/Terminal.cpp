@@ -1,9 +1,9 @@
 #include "Terminal.h"
 
-using namespace std;
-
 namespace ScreenManager {
+
 	namespace Terminal {
+
 		/// <summary>
 		/// Get the width of the console.
 		/// </summary>
@@ -50,5 +50,7 @@ namespace ScreenManager {
 				ESC + "[H"+	// Moves cursor to home position (0, 0).
 				ESC + "[2J";	// Erase entire screen.
 		}
+
 	}
+
 }
