@@ -59,5 +59,17 @@ namespace ScreenManager {
 			bottom_left_corner = char(200),
 			bottom_right_corner = char(188),
 		};
+
+		/// <summary>
+		/// Override the << operator.
+		/// </summary>
+		/// <param name="_out">stdout.</param>
+		/// <param name="c">the double_b enumeration variable.</param>
+		/// <returns></returns>
+		inline ostream& operator<< (ostream& _out, const double_b& c) {
+			_out << static_cast<char>(c);
+			return _out;
+		}
+
 	}
 }
