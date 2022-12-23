@@ -71,5 +71,15 @@ namespace ScreenManager {
 				cout << double_b::h_line;
 			}
 		}
+
+		/// <summary>
+		/// Draw a double border vertical line.
+		/// </summary>
+		/// <param name="l"> Length of the line.</param>
+		void draw_double_vertical_line(short l) {
+			for (short i = 0; i < l; i++) {
+				cout << double_b::v_line << move_backward(1) << move_down(1);
+			}
+		}
 	}
 }

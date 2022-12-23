@@ -72,6 +72,7 @@ namespace ScreenManager {
 		}
 
 		void draw_double_horizontal_line(short);				// Double border horizontal line.
+		void draw_double_vertical_line(short);					// Double border vertical line.
 
 	}
 }
