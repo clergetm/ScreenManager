@@ -61,5 +61,15 @@ namespace ScreenManager {
 		void draw_simple_border(coordinates start, coordinates end) {
 			draw_simple_border(get<0>(start), get<1>(start), get<0>(end), get<1>(end));
 		}
+
+		/// <summary>
+		/// Draw a double border horizontal line.
+		/// </summary>
+		/// <param name="l"> Length of the line.</param>
+		void draw_double_horizontal_line(short l) {
+			for (short i = 0; i < l; i++) {
+				cout << double_b::h_line;
+			}
+		}
 	}
 }
