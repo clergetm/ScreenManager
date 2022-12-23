@@ -7,7 +7,7 @@
   <p align="center">
     A Screen Management library in C++.
     <br />
-    <a href="https://github.com/MathysC/ScreenManager/tree/main/Docs"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/MathysC/ScreenManager/wiki"><strong>Explore the wiki »</strong></a>
     <br />
   </p>
 </div>

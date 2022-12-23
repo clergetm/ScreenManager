@@ -33,7 +33,7 @@ namespace ScreenManager {
 		/// Override the << operator.
 		/// </summary>
 		/// <param name="_out">stdout.</param>
-		/// <param name="c">the simple_b enumeration variable.</param>
+		/// <param name="c">The simple_b enumeration variable.</param>
 		/// <returns></returns>
 		inline ostream& operator<< (ostream& _out,const simple_b& c) {
 			_out << static_cast<char>(c);
@@ -66,7 +66,7 @@ namespace ScreenManager {
 		/// Override the << operator.
 		/// </summary>
 		/// <param name="_out">stdout.</param>
-		/// <param name="c">the double_b enumeration variable.</param>
+		/// <param name="c">The double_b enumeration variable.</param>
 		/// <returns></returns>
 		inline ostream& operator<< (ostream& _out, const double_b& c) {
 			_out << static_cast<char>(c);
