@@ -1,9 +1,9 @@
-#include "Screen.h"
+#include "Terminal.h"
 
 using namespace std;
 
 namespace ScreenManager {
-	namespace Screen {
+	namespace Terminal {
 		/// <summary>
 		/// Get the width of the console.
 		/// </summary>

@@ -142,12 +142,12 @@
     <ClCompile Include="Cursor.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Border.cpp" />
-    <ClCompile Include="Screen.cpp" />
+    <ClCompile Include="Terminal.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Border.h" />
     <ClInclude Include="Cursor.h" />
-    <ClInclude Include="Screen.h" />
+    <ClInclude Include="Terminal.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
