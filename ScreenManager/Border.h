@@ -1,7 +1,9 @@
 ﻿#pragma once
 #include <iostream>
+#include "Cursor.h"
 
 using namespace std;
+using namespace ScreenManager::Cursor;
 namespace ScreenManager {
 	/// <summary>
 	/// Namespace for border related methods.
@@ -37,5 +39,7 @@ namespace ScreenManager {
 		}
 		
 		void draw_simple_horizontal_line(short);	// Horizontal line simple border.
+		void draw_simple_vertical_line(short l);	// Vertical line simple border.
+
 	}
 }
