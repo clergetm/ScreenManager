@@ -38,8 +38,9 @@ namespace ScreenManager {
 			return _out;
 		}
 		
-		void draw_simple_horizontal_line(short);	// Horizontal line simple border.
-		void draw_simple_vertical_line(short l);	// Vertical line simple border.
-
+		void draw_simple_horizontal_line(short);				// Simple border horizontal line.
+		void draw_simple_vertical_line(short);					// Simple border vertical line.
+		void draw_simple_border(short, short, short, short);	// Simple border rectangle.
+		void draw_simple_border(coordinates, coordinates);		// Simple border rectangle with coordinates tuples.
 	}
 }
