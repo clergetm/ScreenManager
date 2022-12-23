@@ -8,7 +8,7 @@ namespace ScreenManager {
 		/// Get the width of the console.
 		/// </summary>
 		/// <returns>The width</returns>
-		int get_width() {
+		short get_width() {
 			CONSOLE_SCREEN_BUFFER_INFO csbi;
 			GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
 			return csbi.srWindow.Right - csbi.srWindow.Left + 1;
@@ -18,10 +18,18 @@ namespace ScreenManager {
 		/// Get the height of the console.
 		/// </summary>
 		/// <returns>The height</returns>
-		int get_height() {
+		short get_height() {
 			CONSOLE_SCREEN_BUFFER_INFO csbi;
 			GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
 			return csbi.srWindow.Bottom - csbi.srWindow.Top + 1;
+		}
+
+		/// <summary>
+		/// Get current Width and Height.
+		/// </summary>
+		/// <returns>The width and height as the max coordinates of the Terminal.</returns>
+		coordinates get_size() {
+			return make_tuple(get_width(), get_height());
 		}
 
 		/// <summary>
