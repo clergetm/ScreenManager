@@ -35,21 +35,21 @@ namespace ScreenManager {
 			assert(x < end_y || y < end_y);
 
 			// Left vertical line.
-			cout << set_coordinates(x + 1, y);
-			draw_simple_vertical_line(end_x - x - 1);
+			cout << set_coordinates(x, y);
+			draw_simple_vertical_line(end_y - y);
 
 			// Right vertical line.
-			cout << set_coordinates(x + 1, end_y - 1);
-			draw_simple_vertical_line(end_x - x - 1);
+			cout << set_coordinates(end_x, y);
+			draw_simple_vertical_line(end_y - y);
 
 			// Top horizontal line.
 			cout << set_coordinates(x, y) << simple_b::top_left_corner;
-			draw_simple_horizontal_line(end_y - y - 2);
+			draw_simple_horizontal_line(end_x - x - 2);
 			cout << simple_b::top_right_corner;
 
 			// Bottom horizontal line.
-			cout << set_coordinates(end_x, y) << simple_b::bottom_left_corner;
-			draw_simple_horizontal_line(end_y - y - 2);
+			cout << set_coordinates(x, end_y) << simple_b::bottom_left_corner;
+			draw_simple_horizontal_line(end_x - x - 2);
 			cout << simple_b::bottom_right_corner;
 		}
 
@@ -93,21 +93,21 @@ namespace ScreenManager {
 			assert(x < end_y || y < end_y);
 
 			// Left vertical line.
-			cout << set_coordinates(x + 1, y);
-			draw_double_vertical_line(end_x - x - 1);
+			cout << set_coordinates(x, y);
+			draw_double_vertical_line(end_y - y);
 
 			// Right vertical line.
-			cout << set_coordinates(x + 1, end_y - 1);
-			draw_double_vertical_line(end_x - x - 1);
+			cout << set_coordinates(end_x, y);
+			draw_double_vertical_line(end_y - y);
 
 			// Top horizontal line.
 			cout << set_coordinates(x, y) << double_b::top_left_corner;
-			draw_double_horizontal_line(end_y - y - 2);
+			draw_double_horizontal_line(end_x - x - 2);
 			cout << double_b::top_right_corner;
 
 			// Bottom horizontal line.
-			cout << set_coordinates(end_x, y) << double_b::bottom_left_corner;
-			draw_double_horizontal_line(end_y - y - 2);
+			cout << set_coordinates(x, end_y) << double_b::bottom_left_corner;
+			draw_double_horizontal_line(end_x - x - 2);
 			cout << double_b::bottom_right_corner;
 		}
 
