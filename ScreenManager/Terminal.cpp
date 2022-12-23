@@ -27,6 +27,7 @@ namespace ScreenManager {
 		/// <summary>
 		/// Go back to (0, 0) and clear the terminal.
 		/// </summary>
+		/// <returns>The ANSI Sequence to clear the terminal.</returns>
 		string clear() {
 			return 
 				"\033[H"	// Moves cursor to home position (0, 0).
