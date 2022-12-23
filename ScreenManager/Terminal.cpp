@@ -25,6 +25,15 @@ namespace ScreenManager {
 		}
 
 		/// <summary>
+		/// Set the title of the Terminal.
+		/// </summary>
+		/// <param name="title">The title.</param>
+		/// <returns>The ANSI Sequence to set the title.</returns>
+		string set_title(string title) {
+			return "\033]0;" + title + "\x07";
+		}
+
+		/// <summary>
 		/// Go back to (0, 0) and clear the terminal.
 		/// </summary>
 		/// <returns>The ANSI Sequence to clear the terminal.</returns>
