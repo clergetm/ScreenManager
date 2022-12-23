@@ -1,8 +1,10 @@
 #pragma once
 #include <Windows.h>
 #include <string>
-using namespace std;
+#include "ScreenManager.h"
 
+using namespace std;
+using namespace ScreenManager;
 namespace ScreenManager {
 	
 	/// <summary>

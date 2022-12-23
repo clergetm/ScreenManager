@@ -30,7 +30,7 @@ namespace ScreenManager {
 		/// <param name="title">The title.</param>
 		/// <returns>The ANSI Sequence to set the title.</returns>
 		string set_title(string title) {
-			return "\033]0;" + title + "\x07";
+			return ESC + "]0;" + title + "\x07";
 		}
 
 		/// <summary>
@@ -39,8 +39,8 @@ namespace ScreenManager {
 		/// <returns>The ANSI Sequence to clear the terminal.</returns>
 		string clear() {
 			return 
-				"\033[H"	// Moves cursor to home position (0, 0).
-				"\033[2J";	// Erase entire screen.
+				ESC + "[H"+	// Moves cursor to home position (0, 0).
+				ESC + "[2J";	// Erase entire screen.
 		}
 	}
 }

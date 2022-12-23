@@ -147,6 +147,7 @@
   <ItemGroup>
     <ClInclude Include="Border.h" />
     <ClInclude Include="Cursor.h" />
+    <ClInclude Include="ScreenManager.h" />
     <ClInclude Include="Terminal.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -21,7 +21,7 @@ namespace ScreenManager {
 		/// <param name="y">value on y axis.</param>
 		/// <returns>The ANSI Sequence to set the coordinates.</returns>
 		string set_coordinates(short x, short y) {
-			return "\033[" + to_string(y) + ";" + to_string(x) + "H";
+			return ESC + "[" + to_string(y) + ";" + to_string(x) + "H";
 		}
 
 		/// <summary>
@@ -39,7 +39,7 @@ namespace ScreenManager {
 		/// <param name="l">number of lines.</param>
 		/// <returns>The ANSI Sequence to move the cursor up.</returns>
 		string move_up(short l) {
-			return "\033[" + to_string(l) + "A";
+			return ESC + "[" + to_string(l) + "A";
 		}	
 
 		/// <summary>
@@ -48,7 +48,7 @@ namespace ScreenManager {
 		/// <param name="l">number of lines.</param>
 		/// <returns>The ANSI Sequence to move the cursor down.</returns>
 		string move_down(short l) {
-			return "\033[" + to_string(l) + "B";
+			return ESC + "[" + to_string(l) + "B";
 		}
 
 		/// <summary>
@@ -57,7 +57,7 @@ namespace ScreenManager {
 		/// <param name="l">number of lines.</param>
 		/// <returns>The ANSI Sequence to move the cursor forward.</returns>
 		string move_forward(short l) {
-			return "\033[" + to_string(l) + "C";
+			return ESC + "[" + to_string(l) + "C";
 		}
 
 		/// <summary>
@@ -66,7 +66,7 @@ namespace ScreenManager {
 		/// <param name="l">number of lines.</param>
 		/// <returns>The ANSI Sequence to move the cursor backward.</returns>
 		string move_backward(short l) {
-			return "\033[" + to_string(l) + "D";
+			return ESC + "[" + to_string(l) + "D";
 		}
 
 		/// <summary>
