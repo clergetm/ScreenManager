@@ -73,6 +73,8 @@ namespace ScreenManager {
 
 		void draw_double_horizontal_line(short);				// Double border horizontal line.
 		void draw_double_vertical_line(short);					// Double border vertical line.
+		void draw_double_border(short, short, short, short);	// Double border rectangle.
+		void draw_double_border(coordinates, coordinates);		// Double border rectangle with coordinates tuples.
 
 	}
 }
