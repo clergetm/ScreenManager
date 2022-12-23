@@ -3,7 +3,6 @@
 
 using namespace std;
 namespace ScreenManager {
-	
 	/// <summary>
 	/// Namespace for border related methods.
 	/// </summary>
@@ -36,5 +35,7 @@ namespace ScreenManager {
 			_out << static_cast<char>(c);
 			return _out;
 		}
+		
+		void draw_simple_horizontal_line(short);	// Horizontal line simple border.
 	}
 }
