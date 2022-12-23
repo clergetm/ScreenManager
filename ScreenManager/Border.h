@@ -42,5 +42,22 @@ namespace ScreenManager {
 		void draw_simple_vertical_line(short);					// Simple border vertical line.
 		void draw_simple_border(short, short, short, short);	// Simple border rectangle.
 		void draw_simple_border(coordinates, coordinates);		// Simple border rectangle with coordinates tuples.
+
+		/// <summary>
+		/// Enumeration of ascii characters used to draw a double border.
+		/// </summary>
+		enum class double_b : char {
+			v_line = char(186),
+			h_line = char(205),
+			center_left = char(185),
+			center_right = char(204),
+			center_top = char(202),
+			center_bottom = char(203),
+			cross = char(206),
+			top_left_corner = char(201),
+			top_right_corner = char(187),
+			bottom_left_corner = char(200),
+			bottom_right_corner = char(188),
+		};
 	}
 }
