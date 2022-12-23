@@ -1,9 +1,10 @@
 #include "Cursor.h"
+#include <assert.h>
 #include <iostream>
-using namespace std;
 
 namespace ScreenManager {
 	namespace Cursor {
+
 		/// <summary>
 		/// Getter of coordinates.
 		/// </summary>
@@ -21,6 +22,8 @@ namespace ScreenManager {
 		/// <param name="y">value on y axis.</param>
 		/// <returns>The ANSI Sequence to set the coordinates.</returns>
 		string set_coordinates(short x, short y) {
+			assert(x >= 0);
+			assert(y >= 0);
 			return ESC + "[" + to_string(y) + ";" + to_string(x) + "H";
 		}
 
@@ -39,6 +42,7 @@ namespace ScreenManager {
 		/// <param name="l">number of lines.</param>
 		/// <returns>The ANSI Sequence to move the cursor up.</returns>
 		string move_up(short l) {
+			assert(l >= 0);
 			return ESC + "[" + to_string(l) + "A";
 		}	
 
@@ -48,6 +52,7 @@ namespace ScreenManager {
 		/// <param name="l">number of lines.</param>
 		/// <returns>The ANSI Sequence to move the cursor down.</returns>
 		string move_down(short l) {
+			assert(l >= 0);
 			return ESC + "[" + to_string(l) + "B";
 		}
 
@@ -57,6 +62,7 @@ namespace ScreenManager {
 		/// <param name="l">number of lines.</param>
 		/// <returns>The ANSI Sequence to move the cursor forward.</returns>
 		string move_forward(short l) {
+			assert(l >= 0);
 			return ESC + "[" + to_string(l) + "C";
 		}
 
@@ -66,6 +72,7 @@ namespace ScreenManager {
 		/// <param name="l">number of lines.</param>
 		/// <returns>The ANSI Sequence to move the cursor backward.</returns>
 		string move_backward(short l) {
+			assert(l >= 0);
 			return ESC + "[" + to_string(l) + "D";
 		}
 
