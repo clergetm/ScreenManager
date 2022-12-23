@@ -1,5 +1,7 @@
 ﻿#pragma once
+#include <iostream>
 
+using namespace std;
 namespace ScreenManager {
 	
 	/// <summary>
@@ -24,5 +26,15 @@ namespace ScreenManager {
 			bottom_right_corner = char(217),
 		};
 
+		/// <summary>
+		/// Override the << operator.
+		/// </summary>
+		/// <param name="_out">stdout.</param>
+		/// <param name="c">the simple_b enumeration variable.</param>
+		/// <returns></returns>
+		inline ostream& operator<< (ostream& _out,const simple_b& c) {
+			_out << static_cast<char>(c);
+			return _out;
+		}
 	}
 }
