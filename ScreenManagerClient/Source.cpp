@@ -60,8 +60,88 @@ void second() {
 	pause();
 }
 
+void third() {
+	cout << Terminal::set_title("GAME EXAMPLE");
+	// Global border
+	Border::draw_double_border(make_tuple(0, 0), Terminal::get_size());
+
+	// Drawing Top line
+	cout << Cursor::set_coordinates(2, 5);
+	Border::draw_double_horizontal_line(Terminal::x() - 2);
+
+
+	// Adding Top texts
+	Cursor::cout_on_pos(2, 2, "Name: toto");
+	Cursor::cout_on_pos(2, 3, "Age: 21");
+	Cursor::cout_on_pos(2, 4, "Occupation: IT Student");
+
+	// Adding left separation
+	cout << Cursor::set_coordinates(20, 6);
+	Border::draw_simple_vertical_line(Terminal::y()-5);
+
+	// Adding Left texts
+	Cursor::cout_on_pos(3, 6, "Quests");
+	Cursor::cout_on_pos(3, 7, "- (1) Go to Uni.");
+	Cursor::cout_on_pos(3, 8, "- (2) Eat lunch.");
+
+	// From https://www.asciiart.eu/computers/computers
+	short x = 22;
+	short y = 6;
+	cout_on_pos(x, y++, "                         | ___  o|");
+	cout_on_pos(x, y++, "                         |[_-_]_ |");
+	cout_on_pos(x, y++, "      ______________     |[_____]|");
+	cout_on_pos(x, y++, "     |.------------.|    |[_____]|");
+	cout_on_pos(x, y++, "     ||            ||    |[====o]|");
+	cout_on_pos(x, y++, "     ||            ||    |[_.--_]|");
+	cout_on_pos(x, y++, "     ||            ||    |[_____]|");
+	cout_on_pos(x, y++, "     ||            ||    |      :|");
+	cout_on_pos(x, y++, "     ||____________||    |      :|");
+	cout_on_pos(x, y++, " .==.|\"\"  ......    |.==.|      :|");
+	cout_on_pos(x, y++, " |::| '-.________.-' |::||      :|");
+	cout_on_pos(x, y++, " |''|  (__________)-.|''||______:|");
+	cout_on_pos(x, y++, " `\"\"`_.............._\"\"`______");
+	cout_on_pos(x, y++, "    /:::::::::::'':::\\`;'-.-.  `\\");
+	cout_on_pos(x, y++, "   /::=========.:.-::\"\\ \\ \\--\\   \\");
+	cout_on_pos(x, y++, "   \\`\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"`/  \\ \\__)   \\");
+	cout_on_pos(x, y++, "    `\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"`    '========'");
+
+	// https://www.asciiart.eu/cartoons/other
+	x = 62;
+	y = 6;
+	cout_on_pos(x, y++, "           _  .   .   .");
+	cout_on_pos(x, y++, "         .' '; '-' '-'|-.");
+	cout_on_pos(x, y++, "        (     '------.'  )");
+	cout_on_pos(x, y++, "         ;            \\ /");
+	cout_on_pos(x, y++, "          :     '   ' |/");
+	cout_on_pos(x, y++, "          '._._       \\    .;");
+	cout_on_pos(x, y++, "         .-'   ;--.    '--' /");
+	cout_on_pos(x, y++, "        /      \\-'---.___.'");
+	cout_on_pos(x, y++, "       |     / 7 \\(>o<) /\\");
+	cout_on_pos(x, y++, "       |     | \\ |  . \\   \\");
+	cout_on_pos(x, y++, "       |=====|   |  .  \\ |-)");
+	cout_on_pos(x, y++, "        |-'-'   ./_.-._.\\|\"");
+	cout_on_pos(x, y++, "        '-.----'        |");
+	cout_on_pos(x, y++, "          |       |     |");
+	cout_on_pos(x, y++, "          |     | |   | |");
+	cout_on_pos(x, y++, "          |_____|_|___|_|");
+	cout_on_pos(x, y++, "          (-------',----'.");
+	cout_on_pos(x, y++, "           '-'-----'-----'");
+
+
+
+	// Draw right part
+	cout_on_pos(98, 26, "Your choice:");
+	
+	Border::draw_simple_border(101, 27, 106, 29);
+	cout << Cursor::set_coordinates(101, 27) << Border::simple_b::cross
+		<<  Cursor::move_down(2) << move_backward(1) << Border::simple_b::cross
+		<< Cursor::move_forward(4) << Border::simple_b::cross
+		<< Cursor::move_up(2) << move_backward(1) << Border::simple_b::cross;
+	pause();
+}
+
 
 int main() {
-	second();
+	third();
 	return 0;
 }
