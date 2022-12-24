@@ -43,7 +43,7 @@ namespace ScreenManager {
 		/// <param name="l">The number of lines.</param>
 		/// <returns>The ANSI Sequence code to move the cursor up.</returns>
 		string move_up(short l) {
-			assert(l >= 0);
+			assert(l > 0);
 			return ESC + "[" + to_string(l) + "A";
 		}	
 
@@ -53,7 +53,7 @@ namespace ScreenManager {
 		/// <param name="l">The number of lines.</param>
 		/// <returns>The ANSI Sequence code to move the cursor down.</returns>
 		string move_down(short l) {
-			assert(l >= 0);
+			assert(l > 0);
 			return ESC + "[" + to_string(l) + "B";
 		}
 
@@ -63,7 +63,7 @@ namespace ScreenManager {
 		/// <param name="l">The number of lines.</param>
 		/// <returns>The ANSI Sequence codeto move the cursor forward.</returns>
 		string move_forward(short l) {
-			assert(l >= 0);
+			assert(l > 0);
 			return ESC + "[" + to_string(l) + "C";
 		}
 
@@ -73,7 +73,7 @@ namespace ScreenManager {
 		/// <param name="l">The number of lines.</param>
 		/// <returns>The ANSI Sequence code to move the cursor backward.</returns>
 		string move_backward(short l) {
-			assert(l >= 0);
+			assert(l > 0);
 			return ESC + "[" + to_string(l) + "D";
 		}
 
