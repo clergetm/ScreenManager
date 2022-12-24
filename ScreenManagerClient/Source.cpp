@@ -3,6 +3,14 @@
 #include "Border.h"
 #include "Terminal.h"
 
+/// <summary>
+/// Move down the cursor to avoid overlapping the example with ending message.
+/// </summary>
+void pause() {
+	cout << Cursor::set_coordinates(0, Terminal::y() - 1);
+	system("pause");
+}
+
 void first() {
 	// Change the title
 	cout << Terminal::set_title("First test");
@@ -35,14 +43,25 @@ void first() {
 	// Cout message in the middle.
 	Cursor::cout_on_pos(40, 10, "Hello, world!");
 
-	// Move down the cursor to avoid overlapping the example with ending message.
-	cout << Cursor::set_coordinates(0, Terminal::y() - 1);
-	system("pause");
+	pause(); 
 
+}
+
+void second() {
+
+	for (short x = 5; x < Terminal::x(); x++) {
+		Border::draw_simple_border(x % 5, x % 5, x, 10);
+
+		Border::draw_double_border(x % 5, x % 5 + 15, x, 25);
+
+		Sleep(50);
+		cout << Terminal::clear();
+	}
+	pause();
 }
 
 
 int main() {
-	//first();
+	second();
 	return 0;
 }
