@@ -46,22 +46,28 @@ namespace ScreenManager {
 			assert(y < end_y);
 
 			// Left vertical line.
-			cout << set_coordinates(x, y);
+			cout << set_coordinates(x, y + 1);
 			draw_simple_vertical_line(end_y - y);
 
 			// Right vertical line.
-			cout << set_coordinates(end_x, y);
+			cout << set_coordinates(end_x, y + 1);
 			draw_simple_vertical_line(end_y - y);
 
 			// Top horizontal line.
-			cout << set_coordinates(x, y) << simple_b::top_left_corner;
-			draw_simple_horizontal_line(end_x - x - 2);
-			cout << simple_b::top_right_corner;
+			cout << set_coordinates(x, y);
+			draw_simple_horizontal_line(end_x - x);
 
 			// Bottom horizontal line.
-			cout << set_coordinates(x, end_y) << simple_b::bottom_left_corner;
-			draw_simple_horizontal_line(end_x - x - 2);
-			cout << simple_b::bottom_right_corner;
+			cout << set_coordinates(x, end_y);
+			draw_simple_horizontal_line(end_x - x);
+
+
+			// Corners
+			cout << set_coordinates(x, y) << simple_b::top_left_corner
+				<< set_coordinates(end_x, y) << simple_b::top_right_corner
+				<< set_coordinates(x, end_y) << simple_b::bottom_left_corner
+				<< set_coordinates(end_x, end_y) << simple_b::bottom_right_corner;
+
 		}
 
 		/// <summary>
@@ -114,22 +120,27 @@ namespace ScreenManager {
 			assert(y < end_y);
 
 			// Left vertical line.
-			cout << set_coordinates(x, y);
+			cout << set_coordinates(x, y + 1);
 			draw_double_vertical_line(end_y - y);
 
 			// Right vertical line.
-			cout << set_coordinates(end_x, y);
+			cout << set_coordinates(end_x, y + 1);
 			draw_double_vertical_line(end_y - y);
 
 			// Top horizontal line.
-			cout << set_coordinates(x, y) << double_b::top_left_corner;
-			draw_double_horizontal_line(end_x - x - 2);
-			cout << double_b::top_right_corner;
+			cout << set_coordinates(x, y);
+			draw_double_horizontal_line(end_x - x);
 
 			// Bottom horizontal line.
-			cout << set_coordinates(x, end_y) << double_b::bottom_left_corner;
-			draw_double_horizontal_line(end_x - x - 2);
-			cout << double_b::bottom_right_corner;
+			cout << set_coordinates(x, end_y);
+			draw_double_horizontal_line(end_x - x);
+
+
+			// Corners
+			cout << set_coordinates(x, y) << double_b::top_left_corner
+				<< set_coordinates(end_x, y) << double_b::top_right_corner
+				<< set_coordinates(x, end_y) << double_b::bottom_left_corner
+				<< set_coordinates(end_x, end_y) << double_b::bottom_right_corner;
 		}
 
 		/// <summary>
