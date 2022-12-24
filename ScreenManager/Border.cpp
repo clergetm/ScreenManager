@@ -10,6 +10,7 @@ namespace ScreenManager {
 		/// </summary>
 		/// <param name="l">The length of the line.</param>
 		void draw_simple_horizontal_line(short l) {
+			assert(l > 0);
 			for (short i = 0; i < l; i++) {
 				cout << simple_b::h_line;
 			}
@@ -20,6 +21,7 @@ namespace ScreenManager {
 		/// </summary>
 		/// <param name="l">The length of the line.</param>
 		void draw_simple_vertical_line(short l) {
+			assert(l > 0);
 			for (short i = 0; i < l; i++) {
 				cout << simple_b::v_line << move_backward(1) << move_down(1);
 			}
@@ -33,7 +35,11 @@ namespace ScreenManager {
 		/// <param name="end_x">x of ending point.</param>
 		/// <param name="end_y">y of ending point.</param>
 		void draw_simple_border(short x, short y, short end_x, short end_y) {
-			assert(x < end_y);
+			assert(x >= 0);
+			assert(y >= 0);
+			assert(end_x > 0);
+			assert(end_y > 0);
+			assert(x < end_x);
 			assert(y < end_y);
 
 			// Left vertical line.
@@ -69,6 +75,7 @@ namespace ScreenManager {
 		/// </summary>
 		/// <param name="l">The length of the line.</param>
 		void draw_double_horizontal_line(short l) {
+			assert(l > 0);
 			for (short i = 0; i < l; i++) {
 				cout << double_b::h_line;
 			}
@@ -79,6 +86,7 @@ namespace ScreenManager {
 		/// </summary>
 		/// <param name="l">The length of the line.</param>
 		void draw_double_vertical_line(short l) {
+			assert(l > 0);
 			for (short i = 0; i < l; i++) {
 				cout << double_b::v_line << move_backward(1) << move_down(1);
 			}
@@ -92,7 +100,11 @@ namespace ScreenManager {
 		/// <param name="end_x">x of ending point.</param>
 		/// <param name="end_y">y of ending point.</param>
 		void draw_double_border(short x, short y, short end_x, short end_y) {
-			assert(x < end_y);
+			assert(x >= 0);
+			assert(y >= 0);
+			assert(end_x > 0);
+			assert(end_y > 0);
+			assert(x < end_x);
 			assert(y < end_y);
 
 			// Left vertical line.
