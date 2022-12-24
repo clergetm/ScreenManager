@@ -22,8 +22,11 @@ namespace ScreenManager {
 		/// <param name="l">The length of the line.</param>
 		void draw_simple_vertical_line(short l) {
 			assert(l > 0);
+			short x = get<0>(get_coordinates());
+			short y = get<1>(get_coordinates());
+
 			for (short i = 0; i < l; i++) {
-				cout << simple_b::v_line << move_backward(1) << move_down(1);
+				cout << simple_b::v_line << set_coordinates(x + 1, y + i + 1);
 			}
 		}
 
@@ -87,8 +90,11 @@ namespace ScreenManager {
 		/// <param name="l">The length of the line.</param>
 		void draw_double_vertical_line(short l) {
 			assert(l > 0);
+			short x = get<0>(get_coordinates());
+			short y = get<1>(get_coordinates());
+
 			for (short i = 0; i < l; i++) {
-				cout << double_b::v_line << move_backward(1) << move_down(1);
+				cout << double_b::v_line << set_coordinates(x + 1, y + i + 1);
 			}
 		}
 
