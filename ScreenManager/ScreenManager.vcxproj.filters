@@ -15,31 +15,28 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Border.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Cursor.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Terminal.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Border.h">
+    <ClInclude Include="ScreenManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Cursor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Border.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Terminal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ScreenManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Cursor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Border.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Terminal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
